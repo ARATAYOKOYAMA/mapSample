@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
-
+    lazy var mapView: MKMapView = {
+        let mapView = MKMapView(frame: view.frame)
+        return mapView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.addSubview(mapView)
     }
-
-
 }
 
